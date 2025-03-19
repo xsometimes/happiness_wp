@@ -1,0 +1,17 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "initializer",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    }
+  ],
+  "generated": "2025-02-23T16:05:38.013681Z",
+  "generator": "pub",
+  "generatorVersion": "3.6.1",
+  "flutterRoot": "file:///Users/lydia/development/flutter",
+  "flutterVersion": "3.27.2",
+  "pubCache": "file:///Users/lydia/.pub-cache"
+}

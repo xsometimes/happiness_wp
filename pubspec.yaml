@@ -1,0 +1,21 @@
+name: happiness_wp
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # widgets:
+  # path: ../widgets
+  shared:
+    path: ./shared
+  # domain:
+  #   path: ./domain
+  # resources:
+  #   path: ./resources
+  initializer:
+    path: ./initializer
+
+dev_dependencies:
+  melos: ^6.3.2
