@@ -2,6 +2,7 @@
 
 import 'package:go_router/go_router.dart';
 import 'package:meow/pages/dashboard/dashboard.dart';
+import 'package:meow/pages/login/login_by_otp.dart';
 import 'package:meow/pages/splash/splash.dart';
 
 final GoRouter meowRouter = GoRouter(
@@ -19,7 +20,7 @@ final GoRouter meowRouter = GoRouter(
     GoRoute(
       name: 'loginByOTP',
       path: '/loginByOTP', // One-Time-Password (OTP 动态口令)
-      builder: (context, state) => Dashboard(),
+      builder: (context, state) => LoginByOTP(),
     ),
     // GoRoute(
     //   path: '/meow',

@@ -27,8 +27,9 @@ class MeowColors {
   /// gradient
   final LinearGradient primaryGradient;
 
+
   static const MeowColors defaultThemeColor = MeowColors(
-    primaryColor: Color(0xFFFF1F1F),
+    primaryColor: Color(0xFFFFD700),
     secondaryColor: Color(0xFFFFA5A5),
     primaryTextColor: Color.fromARGB(255, 62, 62, 70),
     secondaryTextColor: Color.fromARGB(255, 166, 168, 254),
@@ -40,7 +41,7 @@ class MeowColors {
   );
 
   static const darkThemeColor = MeowColors(
-    primaryColor: Color.fromARGB(255, 62, 62, 70),
+    primaryColor: Colors.black54,
     secondaryColor: Color.fromARGB(255, 166, 168, 254),
     primaryTextColor: Color.fromARGB(255, 166, 168, 254),
     secondaryTextColor: Color.fromARGB(255, 62, 62, 70),
