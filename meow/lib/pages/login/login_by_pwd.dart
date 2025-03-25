@@ -1,21 +1,26 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:meow/resources/res_export.dart';
+import 'package:meow/widgets/agreement/agreement.dart';
 import 'package:meow/widgets/meow_btn.dart';
 import 'package:meow/widgets/meow_form/meow_form.dart';
+import 'package:meow/widgets/meow_form/pwd_strength_indicator.dart';
 
-class LoginByOTP extends StatefulWidget {
-  const LoginByOTP({super.key});
+class LoginByPwd extends StatefulWidget {
+  const LoginByPwd({super.key});
 
   @override
-  State<LoginByOTP> createState() => _LoginByOTPState();
+  State<LoginByPwd> createState() => _LoginByPwdState();
 }
 
-class _LoginByOTPState extends State<LoginByOTP> {
+class _LoginByPwdState extends State<LoginByPwd> {
   final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _codeController = TextEditingController();
   String selectedCountryCode = '+86';
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  void _onAgreementsCheck(bool value) {
+    print('checked==> $value');// Handle agreement check
+  }
 
   @override
   void dispose() {
@@ -65,7 +70,7 @@ class _LoginByOTPState extends State<LoginByOTP> {
                     Gaps.v20,
 
                     MeowTextfield(
-                      isCode: true,
+                      isPwd: true,
                       onChanged: (value) {
                         print(value);
                       },
@@ -75,7 +80,10 @@ class _LoginByOTPState extends State<LoginByOTP> {
               ),
               // Phone number input
               // Verification code input
-              
+              PsdStrengthIndicator(
+                psdStrength: PsdStrength.medium,
+                lineHeight: 4,
+              ),
               Gaps.v40,
               // Login button
               MeowBtn(text: '登录', onPressed: () {
@@ -83,43 +91,23 @@ class _LoginByOTPState extends State<LoginByOTP> {
               }),
               Gaps.v16,
               // Password login link
-              TextButton(
-                onPressed: () {
-                  // Handle password login
-                },
-                child: Text(
-                  '密码登录',
-                  style: MeowFontStyles.black14,
-                ),
-              ),
-              const Spacer(),
-
-              RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
-                  style: MeowFontStyles.black12,
-                  children: [
-                    const TextSpan(text: '我已阅读并同意'),
-                    TextSpan(
-                      text: '《用户服务协议》',
-                      style: MeowFontStyles.primaryYellow12,
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                          // Handle user agreement
-                        },
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                    onPressed: () {
+                      // Handle password login
+                    },
+                    child: Text(
+                      '验证码登陆',
+                      style: MeowFontStyles.black14,
                     ),
-                    const TextSpan(text: '和'),
-                    TextSpan(
-                      text: '《隐私政策》',
-                      style: MeowFontStyles.primaryYellow12,
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                          // Handle privacy policy
-                        },
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
+              
+              Spacer(),
+              Agreements(onChecked: _onAgreementsCheck,),
               Gaps.v20,
             ],
           ),

@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           title: 'Lucky Meow',
           theme: lightTheme,
           darkTheme: darkTheme,
-          themeMode: ThemeMode.system,
+          themeMode: ThemeMode.light,
           routerConfig: meowRouter,
           debugShowCheckedModeBanner: false,
           // theme: ThemeData(

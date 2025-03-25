@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meow/resources/colors.dart';
+import 'package:meow/resources/res_export.dart';
 
 class MeowBtn extends StatelessWidget {
   const MeowBtn({
@@ -13,24 +13,24 @@ class MeowBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final Color primaryColor = Theme.of(context).primaryColor;
     return SizedBox(
       width: double.infinity,
-      child: ElevatedButton(
-        onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          backgroundColor: MeowColors.defaultThemeColor.primaryColor,
+      child: GestureDetector(
+        onTap: onPressed,
+        child: Container(
           padding: const EdgeInsets.symmetric(vertical: 10),
-          shape: RoundedRectangleBorder(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
+            color: primaryColor,
           ),
-        ),
-        child: Text(
-          text,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 16,
+          child: Text(
+            text,
+            style: MeowFontStyles.white16,
           ),
-        ),
+        )
       ),
     );
   }

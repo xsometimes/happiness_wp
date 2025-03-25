@@ -8,4 +8,7 @@ class Gaps {
   static const Widget v20 = SizedBox(height: 20);
   static const Widget v40 = SizedBox(height: 40);
   static const Widget v60 = SizedBox(height: 60);
+
+
+  static const Widget h24 = SizedBox(width: 24);
 }

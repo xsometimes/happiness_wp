@@ -6,4 +6,8 @@ class MeowDecorations {
       bottom: BorderSide(color: Colors.grey.shade300),
     ),
   );
+
+  static final UnderlineInputBorder inputUnderlineBorder = UnderlineInputBorder(
+        borderSide: BorderSide(color: Colors.grey.shade300),
+      );
 }
