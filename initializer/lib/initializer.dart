@@ -1,7 +1,4 @@
-
-
-// 初始化应用的函数
-import 'package:meow/utils/storage_manage.dart';
+import 'package:shared/shared.dart';
 
 Future<void> initializeApp() async {
   // 初始化 StorageManager

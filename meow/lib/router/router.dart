@@ -7,7 +7,7 @@ import 'package:meow/pages/login/login_by_pwd.dart';
 import 'package:meow/pages/splash/splash.dart';
 
 final GoRouter meowRouter = GoRouter(
-  initialLocation: '/loginByPwd',
+  initialLocation: '/dashboard',
   routes: [
     GoRoute(
       path: '/splash',
@@ -15,7 +15,7 @@ final GoRouter meowRouter = GoRouter(
     ),
     GoRoute(
       name: 'dashboard',
-      path: '/',
+      path: '/dashboard',
       builder: (context, state) => Dashboard(),
     ),
     GoRoute(

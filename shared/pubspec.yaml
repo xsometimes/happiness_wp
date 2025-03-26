@@ -5,6 +5,10 @@ version: 1.0.0
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
+dependencies:
+  geolocator: ^13.0.3
+  geocoding: ^3.0.0
+  shared_preferences: ^2.5.2
 
 # dependencies:
 #   path: ^1.8.0

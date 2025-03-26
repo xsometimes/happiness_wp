@@ -1,4 +1,5 @@
-import 'package:meow/constants/storage_constants.dart';
+
+import 'package:shared/constants/storage_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class StorageManager {

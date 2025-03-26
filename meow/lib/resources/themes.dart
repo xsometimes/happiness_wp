@@ -13,6 +13,7 @@ final lightTheme = ThemeData(
     // onPrimary: Colors.white, // 重写主要颜色上的文本颜色
     // onSecondary: Colors.white, // 重写次要颜色上的文本颜色
     // onSurface: Colors.black, // 重写表面颜色上的文本颜色
+    
   ),
   splashColor: Colors.transparent,
   useMaterial3: true,

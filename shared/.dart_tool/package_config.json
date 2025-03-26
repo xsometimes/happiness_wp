@@ -158,12 +158,6 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "shared",
-      "rootUri": "../../shared",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
       "name": "shared_preferences",
       "rootUri": "file:///Users/lydia/.pub-cache/hosted/pub.flutter-io.cn/shared_preferences-2.5.2",
       "packageUri": "lib/",
@@ -248,13 +242,13 @@
       "languageVersion": "3.3"
     },
     {
-      "name": "initializer",
+      "name": "shared",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2025-03-26T12:13:43.006755Z",
+  "generated": "2025-03-26T12:08:17.596940Z",
   "generator": "pub",
   "generatorVersion": "3.6.1",
   "flutterRoot": "file:///Users/lydia/development/flutter",

@@ -1,6 +1,6 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:meow/resources/res_export.dart';
+import 'package:meow/widgets/agreement/agreement.dart';
 import 'package:meow/widgets/meow_btn.dart';
 import 'package:meow/widgets/meow_form/meow_form.dart';
 
@@ -16,6 +16,10 @@ class _LoginByOTPState extends State<LoginByOTP> {
   final TextEditingController _codeController = TextEditingController();
   String selectedCountryCode = '+86';
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  void _onAgreementsCheck(bool value) {
+    print('checked==> $value');// Handle agreement check
+  }
 
   @override
   void dispose() {
@@ -94,32 +98,7 @@ class _LoginByOTPState extends State<LoginByOTP> {
               ),
               const Spacer(),
 
-              RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
-                  style: MeowFontStyles.black12,
-                  children: [
-                    const TextSpan(text: '我已阅读并同意'),
-                    TextSpan(
-                      text: '《用户服务协议》',
-                      style: MeowFontStyles.primaryYellow12,
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                          // Handle user agreement
-                        },
-                    ),
-                    const TextSpan(text: '和'),
-                    TextSpan(
-                      text: '《隐私政策》',
-                      style: MeowFontStyles.primaryYellow12,
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                          // Handle privacy policy
-                        },
-                    ),
-                  ],
-                ),
-              ),
+              Agreements(onChecked: _onAgreementsCheck,),
               Gaps.v20,
             ],
           ),

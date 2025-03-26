@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:initializer/initializer.dart';
 import 'package:meow/resources/themes.dart';
 import 'package:meow/router/router.dart';
-import 'package:meow/utils/app_initialization.dart';
 import 'package:meow/utils/app_lifecycle_observer.dart';
 
 void main() async {
@@ -35,6 +35,15 @@ class MyApp extends StatelessWidget {
           themeMode: ThemeMode.light,
           routerConfig: meowRouter,
           debugShowCheckedModeBanner: false,
+          builder: (context, child) {
+            return Container(
+              color: Color(0xffF5F5F5), // 设置背景色，这里使用灰色
+              child: ScaffoldMessenger(
+                key: ScaffoldMessenger.of(context).widget.key,
+                child: child!,
+              ),
+            );
+          }, //设置文字大小不随系统设置改变      ,
           // theme: ThemeData(
             
           //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
