@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class Gaps {
 
+  static const Widget v6 = SizedBox(height: 6);
   static const Widget v8 = SizedBox(height: 8);
   static const Widget v12 = SizedBox(height: 12);
   static const Widget v16 = SizedBox(height: 16);

@@ -1,19 +1,26 @@
-
-
-
 import 'package:flutter/material.dart';
-import 'package:meow/resources/colors.dart';
+import 'package:meow/resources/res_export.dart';
 
 final lightTheme = ThemeData(
   brightness: Brightness.light,
   colorScheme: ColorScheme.light(
     primary: MeowColors.primaryColor, // 重写主要颜色
+    surface: MeowColors.surface,
+    
+   
     // secondary: Colors.green, // 重写次要颜色
     // surface: Colors.grey[100]!, // 重写表面颜色
     // onPrimary: Colors.white, // 重写主要颜色上的文本颜色
     // onSecondary: Colors.white, // 重写次要颜色上的文本颜色
     // onSurface: Colors.black, // 重写表面颜色上的文本颜色
     
+  ),
+  inputDecorationTheme: InputDecorationTheme(
+    // fillColor: Colors.red
+    hintStyle: MeowFontStyles.hint12
+  ),
+  searchBarTheme: SearchBarThemeData(
+    hintStyle: WidgetStateProperty.all(MeowFontStyles.hint12),
   ),
   splashColor: Colors.transparent,
   useMaterial3: true,

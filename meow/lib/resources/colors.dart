@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MeowColors {
-  static const Color primaryColor = Color.fromARGB(255, 150, 164, 157);
+  static const Color primaryColor = Color(0xffFFD028);
+
+  static const Color surface = Color(0xffF5F5F5);
+  static const Color inputHintColor = Color(0xff9CA3AF);
 }
 
 // class MeowColors {

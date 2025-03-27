@@ -16,6 +16,8 @@ dependencies:
   #   path: ./resources
   initializer:
     path: ./initializer
+  widgets:
+    path: ./widgets
 
 dev_dependencies:
   melos: ^6.3.2
